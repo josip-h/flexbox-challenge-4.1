@@ -1,0 +1,163 @@
+/* 1. CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Custom properties */
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-beige: #f3eed9;
+  --color-brown: #824936;
+  --color-dark: #222c2a;
+
+  --screen-max-width: 70rem;
+}
+
+/* 3. Element syles */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+p {
+  text-align: justify;
+}
+
+section {
+  padding-block: 3rem;
+}
+
+/* 4. Composition */
+.flow > * + * {
+  margin-block-start: var(--flow-spacing, 1em);
+}
+/* 5. Utilities */
+.color-background-beige {
+  background-color: var(--color-beige);
+}
+
+.color-background-white {
+  background-color: var(--color-white);
+}
+
+.color-background-dark {
+  background-color: var(--color-dark);
+}
+
+.color-background-brown {
+  background-color: var(--color-brown);
+}
+
+.color-type-black {
+  color: var(--color-black);
+}
+
+.color-type-white {
+  color: var(--color-white);
+}
+
+.color-type-brown {
+  color: var(--color-brown);
+}
+
+.color-type-beige {
+  color: var(--color-beige);
+}
+
+.container {
+  max-width: var(--screen-max-width);
+  margin: 0 auto;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.flex,
+.flex--center {
+  display: flex;
+}
+
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
+/* 6. Blocks */
+
+.section-1 {
+  min-height: 600px;
+}
+
+.section-1__subtitle {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 5px;
+}
+
+.section-1__title {
+  text-align: center;
+}
+
+.section-2 .row {
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+}
+
+.section-2__title {
+  text-align: center;
+}
+/* 7. Exceptions */
+
+/* 8. Media queries */
+@media (min-width: 50rem) {
+  .row {
+    display: flex;
+    gap: 3em;
+  }
+
+  .column {
+    width: 100%;
+    margin: 0;
+
+    img {
+      margin-block-start: 2em;
+    }
+  }
+
+  .image_container {
+    justify-content: flex-end;
+  }
+}
